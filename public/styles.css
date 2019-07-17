@@ -1,0 +1,37 @@
+h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 65px;
+    font-family: 'Shojumaru', cursive;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    text-align: center;
+    margin: auto;
+}
+
+a {
+    color: #F2B807;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 25px;
+    font-family: 'Signika', sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+span {
+    color: #F2B807;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 25px;
+    font-family: 'Signika', sans-serif;
+    text-align: center;
+    margin: auto;
+}
+
+body {
+    background-color: #387CA6;
+}
