@@ -1,11 +1,17 @@
 const express = require('express');
 const app = express();
 
+// app.get('/pokemon', (req, res) => {
+//     res.send('hi mr. pokemon')
+// })
+
+
+const Pokemon = require('./models/pokemon')
+// console.log(Pokemon);
+
 app.get('/pokemon', (req, res) => {
-    res.send('hi mr. pokemon');
+    res.send(Pokemon);
 })
-
-
 
 
 
