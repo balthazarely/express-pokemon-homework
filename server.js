@@ -1,7 +1,15 @@
 const express = require('express');
 const app = express();
+const bodyParser = require("body-parser");
+const methodOverride = require("method-override");
 
+
+//middlewear
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(methodOverride('_method'));
 app.use(express.static('public'));
+
+
 
 const Pokemon = require('./models/pokemon')
 
@@ -13,12 +21,22 @@ app.get('/pokemon', (req, res) => {
     });
 });
 
+//New
+app.get('/pokemon/new', (req, res) => {
+    res.render('new.ejs')
+}); 
+
+
 // Show
 app.get('/pokemon/:index', (req, res) => {
     res.render('show.ejs', {
         pokemon: Pokemon[req.params.index]
     });
 });
+
+
+
+
 
 
 
