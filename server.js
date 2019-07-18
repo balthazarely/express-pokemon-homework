@@ -27,6 +27,20 @@ app.delete('/pokemon/:index', (req, res) => {
     res.redirect('/pokemon');
 })
 
+//Edit
+app.get('/pokemon/:index/edit', (req, res) => {
+    res.render("edit.ejs", {
+        pokemon: Pokemon[req.params.index],
+        index: req.params.index
+    })
+})
+
+// Update
+app.put('/cars/:index',  (req, res) => {
+    Pokemon[req.params.index] = req.body,
+    res.redirect('/pokemon')
+})
+
 //New
 app.get('/pokemon/new', (req, res) => {
     res.render('new.ejs')
