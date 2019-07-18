@@ -4,6 +4,9 @@ h3 {
     font-size: 70px;
     font-family: 'Luckiest Guy', cursive;
     text-align: center;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #E39207;
+    
 }
 
 li {
