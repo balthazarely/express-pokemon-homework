@@ -36,7 +36,7 @@ app.get('/pokemon/:index/edit', (req, res) => {
 })
 
 // Update
-app.put('/cars/:index',  (req, res) => {
+app.put('/pokemon/:index',  (req, res) => {
     Pokemon[req.params.index] = req.body,
     res.redirect('/pokemon')
 })
