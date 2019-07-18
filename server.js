@@ -21,11 +21,23 @@ app.get('/pokemon', (req, res) => {
     });
 });
 
+// Delete
+app.delete('/pokemon/:index', (req, res) => {
+    Pokemon.splice(req.params.index, 1);
+    res.redirect('/pokemon');
+})
+
 //New
 app.get('/pokemon/new', (req, res) => {
     res.render('new.ejs')
 }); 
 
+//Post
+app.post('/pokemon', (req, res) => {
+    console.log(req.body, "this is the new pokemon")
+    Pokemon.push(req.body)
+    res.redirect('/pokemon')
+});
 
 // Show
 app.get('/pokemon/:index', (req, res) => {
@@ -33,9 +45,6 @@ app.get('/pokemon/:index', (req, res) => {
         pokemon: Pokemon[req.params.index]
     });
 });
-
-
-
 
 
 

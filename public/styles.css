@@ -73,4 +73,8 @@ form {
     font-size: 22px;
     font-family: 'Carter One', cursive;
     color: white;
+    border-radius: 0;
+}
+button, input, select, textarea {
+    font-family: 'Carter One', cursive;
 }
